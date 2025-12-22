@@ -11,8 +11,7 @@ def get_random_question(category: str) -> str:
 
 def play_question(question: str) -> str:
     engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[0].id)
+    engine.setProperty('voice', 'ru')
     engine.say(question)
     engine.runAndWait()
 
